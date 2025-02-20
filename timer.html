@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Timer</title>
+    
+    <link rel="stylesheet" href="timer.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap">
+    <script defer src="timer_script.js"></script>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="circle-text"></div>
+    </div>
+
+    <div id="timer">8:00</div>
+    
+    <div class="textbox-wrapper">
+        <div class="textbox">
+            <textarea id="textbox" placeholder="Write something..." oninput="adjustHeight(this)"></textarea>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="toggleTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+        <button onclick="downloadText()">Download</button>
+    </div>
+
+
+</body>
+</html>

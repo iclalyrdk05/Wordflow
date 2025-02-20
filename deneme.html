@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morphing Text Animation</title>
+
+    <link rel="stylesheet" href="deneme.css">
+</head>
+<body>
+
+    <div id="container">
+        <span id="text1"></span>
+        <span id="text2"></span>
+    </div>
+
+    <div id="side-nav">
+        <div class="nav-circle" onclick="showText(0)">1</div>
+        <div class="nav-circle" onclick="showText(1)">2</div>
+        <div class="nav-circle" onclick="showText(2)">3</div>
+        <div class="nav-circle" onclick="showText(3)">4</div>
+        <div class="nav-circle" onclick="showText(4)">5</div>
+        <div class="nav-circle" onclick="showText(5)">6</div>
+        <div class="nav-circle" onclick="showText(6)">7</div>
+        <div class="nav-circle" onclick="showText(7)">8</div>
+        <div class="nav-circle" onclick="goToTimer()"></div> 
+    </div>
+
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="deneme.js"></script>
+    <script>
+        function goToTimer() {
+            window.location.href = 'timer.html';
+        }
+    </script>
+</body>
+</html>

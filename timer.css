@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.7) 40%, rgba(255, 215, 0, 0.3) 70%, #fdf6e3 100%);
+    font-family: 'Manrope', sans-serif;
+    color: black;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero {
+    max-width: 45vw;
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3vw;
+    z-index: 0;
+}
+
+.circle-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.3;
+    shape-outside: circle();
+    clip-path: circle();
+}
+
+#timer, .textbox-wrapper, .button-container {
+    position: relative;
+    z-index: 1;
+}
+
+#timer {
+    font-size: 5vw;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.textbox-wrapper {
+    margin-top: 1vh;
+}
+
+.textbox {
+    width: 30vw;
+    min-height: 10vh;
+    max-height: 30vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textbox:hover {
+    border: 1px solid black;
+}
+
+#textbox {
+    width: 100%;
+    min-height: 10vh;
+    max-height: 30vh;
+    border: none;
+    outline: none;
+    font-size: 1.2vw;
+    font-family: 'Manrope', sans-serif;
+    background: transparent;
+    resize: none;
+    color: black;
+    overflow-y: auto;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 1vw;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1vw;
+    border: 1px solid black;
+    background: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        max-width: 70vw;
+        width: 70vw;
+        height: 70vw;
+        top: 45%;
+        padding: 2vw;
+    }
+
+    #timer {
+        font-size: 12vw;
+        bottom: 10%;
+    }
+    
+    .textbox-wrapper {
+        width: 95%; 
+        left: 31%; 
+        bottom: 9%;
+    }
+    
+    #textbox {
+        font-size: 2.5vw; 
+        min-height: 12vh; 
+        max-height: 15vh; 
+    }
+    
+
+    .button-container {
+        gap: 2vw; 
+        margin-top: -5vh; 
+    }
+    
+    button {
+        font-size: 2.5vw; 
+        padding: 0.3rem 0.7rem; 
+    }    
+    
+}
+
+
